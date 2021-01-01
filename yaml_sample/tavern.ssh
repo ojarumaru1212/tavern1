@@ -1,0 +1,20 @@
+#!/bin/bath
+
+case $# in
+  0)
+    echo "全機能のテストを実行します。"
+    pytest -v -s
+    ;;
+  1)
+    echo "$1のテストを実行します。"
+    pytest -v -s test_$1.tavern.yaml
+    ;;
+  *)
+    echo "引数は1つまでです！"
+    ;;
+esac
+
+if test $? -ne 0
+  then 
+    echo "異常終了しました。"
+fi

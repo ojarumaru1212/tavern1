@@ -1,0 +1,15 @@
+test_name: our first tavern test
+
+includes: 
+  - !include common.yaml
+
+marks: 
+  - singlesearch
+
+stages: 
+  - name: make sure status code is 200 for search endpoint
+    request: 
+      url: http://api.tvmaze.com/singlesearch/shows?q=girls
+      method: GET
+    response: 
+      status_code: 200
