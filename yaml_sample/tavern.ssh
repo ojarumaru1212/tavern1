@@ -3,11 +3,11 @@
 case $# in
   0)
     echo "全機能のテストを実行します。"
-    pytest -v -s
+    pytest -vv >> log2.txt
     ;;
   1)
     echo "$1のテストを実行します。"
-    pytest -v -s test_$1.tavern.yaml
+    pytest -v -s test_$1.tavern.yaml >> log2.txt
     ;;
   *)
     echo "引数は1つまでです！"

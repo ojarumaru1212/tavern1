@@ -1,0 +1,79 @@
+============================= test session starts ==============================
+platform linux -- Python 3.7.9, pytest-6.2.1, py-1.10.0, pluggy-0.13.1 -- /usr/bin/python3
+cachedir: .pytest_cache
+metadata: {'Python': '3.7.9', 'Platform': 'Linux-4.14.203-156.332.amzn2.x86_64-x86_64-with-glibc2.2.5', 'Packages': {'pytest': '6.2.1', 'py': '1.10.0', 'pluggy': '0.13.1'}, 'Plugins': {'ordering': '0.6', 'tavern': '1.12.1', 'metadata': '1.11.0', 'html': '3.1.1'}}
+rootdir: /home/ec2-user/tavern_sample/yaml_sample, configfile: pytest.ini
+plugins: ordering-0.6, tavern-1.12.1, metadata-1.11.0, html-3.1.1
+collecting ... collected 5 items
+
+test_archerscast.tavern.yaml::Benjamin is in cast for the show archer PASSED [ 20%]
+test_archerscheduledonwednesday.tavern.yaml::show archer is schedules on wednesday PASSED [ 40%]
+test_archerslink.tavern.yaml::show archer has a valid url link enabled in the response PASSED [ 60%]
+test_firstscript.tavern.yaml::our first tavern test PASSED               [ 80%]
+test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored PASSED [100%]
+
+============================== 5 passed in 2.12s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.7.9, pytest-6.2.1, py-1.10.0, pluggy-0.13.1 -- /usr/bin/python3
+cachedir: .pytest_cache
+metadata: {'Python': '3.7.9', 'Platform': 'Linux-4.14.203-156.332.amzn2.x86_64-x86_64-with-glibc2.2.5', 'Packages': {'pytest': '6.2.1', 'py': '1.10.0', 'pluggy': '0.13.1'}, 'Plugins': {'ordering': '0.6', 'tavern': '1.12.1', 'metadata': '1.11.0', 'html': '3.1.1'}}
+rootdir: /home/ec2-user/tavern_sample/yaml_sample, configfile: pytest.ini
+plugins: ordering-0.6, tavern-1.12.1, metadata-1.11.0, html-3.1.1
+collecting ... collected 5 items
+
+test_archerscast.tavern.yaml::Benjamin is in cast for the show archer PASSED [ 20%]
+test_archerscheduledonwednesday.tavern.yaml::show archer is schedules on wednesday PASSED [ 40%]
+test_archerslink.tavern.yaml::show archer has a valid url link enabled in the response PASSED [ 60%]
+test_firstscript.tavern.yaml::our first tavern test PASSED               [ 80%]
+test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored PASSED [100%]
+
+============================== 5 passed in 2.18s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.7.9, pytest-6.2.1, py-1.10.0, pluggy-0.13.1 -- /usr/bin/python3
+cachedir: .pytest_cache
+metadata: {'Python': '3.7.9', 'Platform': 'Linux-4.14.203-156.332.amzn2.x86_64-x86_64-with-glibc2.2.5', 'Packages': {'pytest': '6.2.1', 'py': '1.10.0', 'pluggy': '0.13.1'}, 'Plugins': {'ordering': '0.6', 'tavern': '1.12.1', 'metadata': '1.11.0', 'html': '3.1.1'}}
+rootdir: /home/ec2-user/tavern_sample/yaml_sample, configfile: pytest.ini
+plugins: ordering-0.6, tavern-1.12.1, metadata-1.11.0, html-3.1.1
+collecting ... collected 5 items
+
+test_archerscast.tavern.yaml::Benjamin is in cast for the show archer PASSED [ 20%]
+test_archerscheduledonwednesday.tavern.yaml::show archer is schedules on wednesday PASSED [ 40%]
+test_archerslink.tavern.yaml::show archer has a valid url link enabled in the response PASSED [ 60%]
+test_firstscript.tavern.yaml::our first tavern test PASSED               [ 80%]
+test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored FAILED [100%]
+
+=================================== FAILURES ===================================
+_ /home/ec2-user/tavern_sample/yaml_sample/test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored _
+Format variables:
+  tv_maze.url:s = 'http://api.tvmaze.com'
+
+Source test stage (line 13):
+  - name: get the link for the show
+    request:
+      url: "{tv_maze.url:s}/shows"
+      method: GET
+    response:
+      status_code: 400
+      verify_response_with:
+        function: utilities.utils:pagination_works
+
+Formatted stage:
+  name: get the link for the show
+  request:
+    method: GET
+    url: 'http://api.tvmaze.com/shows'
+  response:
+    status_code: 400
+    verify_response_with:
+      function: utilities.utils:pagination_works
+
+Errors:
+E   tavern.util.exceptions.TestFailError: Test 'get the link for the show' failed:
+    - Status code was 200, expected 400
+------------------------------ Captured log call -------------------------------
+ERROR    tavern.response.base:base.py:43 Status code was 200, expected 400
+---------------------------- Captured log teardown -----------------------------
+DEBUG    utilities.customlogger:conftest.py:12 Test took 0.5755350589752197 seconds
+=========================== short test summary info ============================
+FAILED test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored
+========================= 1 failed, 4 passed in 2.17s ==========================

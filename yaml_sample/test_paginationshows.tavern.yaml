@@ -16,7 +16,7 @@ stages:
       url: "{tv_maze.url:s}/shows"
       method: GET
     response: 
-      status_code: 200
+      status_code: 400
       verify_response_with:
         function: utilities.utils:pagination_works
       # delay_after: "{tv_maze.delay_between_stages}"

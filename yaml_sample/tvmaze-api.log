@@ -14,3 +14,9 @@
 01/01/2021 03:54:37PM - test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored (teardown) - DEBUG: Test took 0.5683779716491699 seconds
 01/01/2021 03:56:30PM - test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored (teardown) - DEBUG: Test took 0.5769093036651611 seconds
 01/01/2021 03:56:35PM - test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored (teardown) - DEBUG: Test took 0.7499425411224365 seconds
+01/02/2021 07:23:14AM - test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored (teardown) - DEBUG: Test took 0.567817211151123 seconds
+01/02/2021 07:24:56AM - test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored (teardown) - DEBUG: Test took 0.5686314105987549 seconds
+01/02/2021 07:27:01AM - test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored (teardown) - DEBUG: Test took 0.5765156745910645 seconds
+01/02/2021 07:28:01AM - test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored (teardown) - DEBUG: Test took 0.572683572769165 seconds
+01/02/2021 07:28:13AM - test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored (teardown) - DEBUG: Test took 0.5664448738098145 seconds
+01/02/2021 07:28:37AM - test_paginationshows.tavern.yaml::pagination limit for endpoint shows is honored (teardown) - DEBUG: Test took 0.5755350589752197 seconds
