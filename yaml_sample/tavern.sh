@@ -14,6 +14,14 @@ case $# in
     ;;
 esac
 
+array=($(grep FAILED log2.txt))
+
+if [ -z "$array" ]; then
+    echo "Array empty"
+else
+    echo "Array non empty"
+fi
+
 if test $? -ne 0
   then 
     echo "異常終了しました。"
